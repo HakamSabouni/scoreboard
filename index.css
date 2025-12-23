@@ -1,0 +1,137 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff6b35, #d32f2f);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #1a1a1a;
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+
+        .scoreboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .team {
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .team.home {
+            background: linear-gradient(135deg, #26a85d, #000000);
+        }
+
+        .team.away {
+            background: linear-gradient(135deg, #868315, #0a3c63);
+        }
+
+        .team h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            background: black;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .score {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ff3333;
+            font-family: monospace;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            background: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .home button {
+            color: #0d47a1;
+        }
+
+        .away button {
+            color: #b71c1c;
+        }
+
+        button:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .reset-container {
+            text-align: center;
+        }
+
+        .reset-btn {
+            background: #ffc107;
+            color: #1a1a1a;
+            font-size: 1.3rem;
+            padding: 20px 40px;
+        }
+
+        .reset-btn:hover {
+            background: #ffb300;
+        }
+
+        @media (max-width: 768px) {
+            .scoreboard {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .score {
+                font-size: 4rem;
+            }
+        }
